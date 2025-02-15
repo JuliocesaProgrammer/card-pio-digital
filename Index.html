@@ -51,6 +51,29 @@
         </div>
       </div>
       <button onclick="nextItem('hamburgueres')">&gt;</button>
+      <body>
+        <h2>Personalize seu Hambúrguer</h2>
+        <form id="customize-form">
+          <div class="option">
+            <input type="checkbox" id="extra-bacon" name="extras" value="Bacon">
+            <label for="extra-bacon">Adicionar Bacon</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="extra-queijo" name="extras" value="Queijo Extra">
+            <label for="extra-queijo">Adicionar Queijo Extra</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="remove-alface" name="removals" value="Alface">
+            <label for="remove-alface">Remover Alface</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="remove-tomate" name="removals" value="Tomate">
+            <label for="remove-tomate">Remover Tomate</label>
+          </div>
+          <button type="button" onclick="applyCustomizations()">Aplicar Personalização</button>
+        </form>
+        
+        <div id="result"></div>
     </div>
   </div>
 

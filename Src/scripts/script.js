@@ -65,3 +65,17 @@
      document.getElementById('checkout').style.display = 'none';
    }
  }
+
+ function applyCustomizations() {
+  const form = document.getElementById('customize-form');
+  const extras = [];
+  const removals = [];
+  form.querySelectorAll('input[name="extras"]:checked').forEach(item => extras.push(item.value));
+  form.querySelectorAll('input[name="removals"]:checked').forEach(item => removals.push(item.value));
+  
+  let resultText = '<h3>Seu Hambúrguer Personalizado:</h3>';
+  resultText += '<p><strong>Extras:</strong> ' + (extras.length ? extras.join(', ') : 'Nenhum') + '</p>';
+  resultText += '<p><strong>Remoções:</strong> ' + (removals.length ? removals.join(', ') : 'Nenhum') + '</p>';
+  
+  document.getElementById('result').innerHTML = resultText;
+}
